@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CinemaPlayer.js by API html - Cobra Kai</title>
+    <style>
+        * {
+            font-family: "Play", sans-serif;
+        }
+        body {
+            background: #000;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            width: 700px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div
+            id="cinemaplayer"
+
+            data-api-tabs="seasons episodes languages"
+
+            data-api-tab-trailers-selectors="s"
+
+            data-api-tab-seasons-selector-s-options="s1 s2"
+
+            data-api-tab-seasons-selector-s-option-s1-name="Season 1"
+            data-api-tab-seasons-selector-s-option-s2-name="Season 2"
+
+            data-api-tab-seasons-selectors="s1 s2"
+
+            data-api-tab-episodes-selector-s1-options="s1e1 s1e2 s1e3 s1e4 s1e5 s1e6 s1e7 s1e8 s1e9 s1e10"
+
+            data-api-tab-episodes-selector-s1-option-s1e1-name="Episode 1"
+            data-api-tab-episodes-selector-s1-option-s1e2-name="Episode 2"
+            data-api-tab-episodes-selector-s1-option-s1e3-name="Episode 3"
+            data-api-tab-episodes-selector-s1-option-s1e4-name="Episode 4"
+            data-api-tab-episodes-selector-s1-option-s1e5-name="Episode 5"
+            data-api-tab-episodes-selector-s1-option-s1e6-name="Episode 6"
+            data-api-tab-episodes-selector-s1-option-s1e7-name="Episode 7"
+            data-api-tab-episodes-selector-s1-option-s1e8-name="Episode 8"
+            data-api-tab-episodes-selector-s1-option-s1e9-name="Episode 9"
+            data-api-tab-episodes-selector-s1-option-s1e10-name="Episode 10"
+
+            data-api-tab-episodes-selector-s2-options="s2e1 s2e2 s2e3 s2e4 s2e5 s2e6 s2e7 s2e8 s2e9 s2e10"
+
+            data-api-tab-episodes-selector-s2-option-s2e1-name="Episode 1"
+            data-api-tab-episodes-selector-s2-option-s2e2-name="Episode 2"
+            data-api-tab-episodes-selector-s2-option-s2e3-name="Episode 3"
+            data-api-tab-episodes-selector-s2-option-s2e4-name="Episode 4"
+            data-api-tab-episodes-selector-s2-option-s2e5-name="Episode 5"
+            data-api-tab-episodes-selector-s2-option-s2e6-name="Episode 6"
+            data-api-tab-episodes-selector-s2-option-s2e7-name="Episode 7"
+            data-api-tab-episodes-selector-s2-option-s2e8-name="Episode 8"
+            data-api-tab-episodes-selector-s2-option-s2e9-name="Episode 9"
+            data-api-tab-episodes-selector-s2-option-s2e10-name="Episode 10"
+
+            data-api-tab-languages-selectors="s1e1 s1e2 s1e3 s1e4 s1e5 s1e6 s1e7 s1e8 s1e9 s1e10 s2e1 s2e2 s2e3 s2e4 s2e5 s2e6 s2e7 s2e8 s2e9 s2e10"
+
+            data-api-tab-languages-selector-s1e1-options="s1e1en"
+
+            data-api-tab-languages-selector-s1e1-option-s1e1en-name="YouTube"
+            data-api-tab-languages-selector-s1e1-option-s1e1en-action="_rB36UGoP4Y"
+            data-api-tab-languages-selector-s1e1-option-s1e1en-type="youtube"
+
+            data-api-tab-languages-selector-s1e2-options="s1e2en"
+
+            data-api-tab-languages-selector-s1e2-option-s1e2en-name="YouTube"
+            data-api-tab-languages-selector-s1e2-option-s1e2en-action="1Aoc-cd9eYs"
+            data-api-tab-languages-selector-s1e2-option-s1e2en-type="youtube"
+
+            data-api-tab-languages-selector-s1e3-options="s1e3en"
+
+            data-api-tab-languages-selector-s1e3-option-s1e3en-name="YouTube"
+            data-api-tab-languages-selector-s1e3-option-s1e3en-action="9z1nTwP2n0w"
+            data-api-tab-languages-selector-s1e3-option-s1e3en-type="youtube"
+
+            data-api-tab-languages-selector-s1e4-options="s1e4en"
+
+            data-api-tab-languages-selector-s1e4-option-s1e4en-name="YouTube"
+            data-api-tab-languages-selector-s1e4-option-s1e4en-action="yO-hXXhYVkc"
+            data-api-tab-languages-selector-s1e4-option-s1e4en-type="youtube"
+
+            data-api-tab-languages-selector-s1e5-options="s1e5en"
+
+            data-api-tab-languages-selector-s1e5-option-s1e5en-name="YouTube"
+            data-api-tab-languages-selector-s1e5-option-s1e5en-action="aDTUH8VkhVE"
+            data-api-tab-languages-selector-s1e5-option-s1e5en-type="youtube"
+
+            data-api-tab-languages-selector-s1e6-options="s1e6en"
+
+            data-api-tab-languages-selector-s1e6-option-s1e6en-name="YouTube"
+            data-api-tab-languages-selector-s1e6-option-s1e6en-action="MfePCtYUy1g"
+            data-api-tab-languages-selector-s1e6-option-s1e6en-type="youtube"
+
+            data-api-tab-languages-selector-s1e7-options="s1e7en"
+
+            data-api-tab-languages-selector-s1e7-option-s1e7en-name="YouTube"
+            data-api-tab-languages-selector-s1e7-option-s1e7en-action="1jTy2VMqaM4"
+            data-api-tab-languages-selector-s1e7-option-s1e7en-type="youtube"
+
+            data-api-tab-languages-selector-s1e8-options="s1e8en"
+
+            data-api-tab-languages-selector-s1e8-option-s1e8en-name="YouTube"
+            data-api-tab-languages-selector-s1e8-option-s1e8en-action="9S9ydLeG-Lw"
+            data-api-tab-languages-selector-s1e8-option-s1e8en-type="youtube"
+
+            data-api-tab-languages-selector-s1e9-options="s1e9en"
+
+            data-api-tab-languages-selector-s1e9-option-s1e9en-name="YouTube"
+            data-api-tab-languages-selector-s1e9-option-s1e9en-action="81XSlh_UKJg"
+            data-api-tab-languages-selector-s1e9-option-s1e9en-type="youtube"
+
+            data-api-tab-languages-selector-s1e10-options="s1e10en"
+
+            data-api-tab-languages-selector-s1e10-option-s1e10en-name="YouTube"
+            data-api-tab-languages-selector-s1e10-option-s1e10en-action="vNgbK85d0ZM"
+            data-api-tab-languages-selector-s1e10-option-s1e10en-type="youtube"
+
+            data-api-tab-languages-selector-s2e1-options="s2e1en"
+
+            data-api-tab-languages-selector-s2e1-option-s2e1en-name="YouTube"
+            data-api-tab-languages-selector-s2e1-option-s2e1en-action="eKc-SxD0HZE"
+            data-api-tab-languages-selector-s2e1-option-s2e1en-type="youtube"
+
+            data-api-tab-languages-selector-s2e2-options="s2e2en"
+
+            data-api-tab-languages-selector-s2e2-option-s2e2en-name="YouTube"
+            data-api-tab-languages-selector-s2e2-option-s2e2en-action="cbPXUNqDXrw"
+            data-api-tab-languages-selector-s2e2-option-s2e2en-type="youtube"
+
+            data-api-tab-languages-selector-s2e3-options="s2e3en"
+
+            data-api-tab-languages-selector-s2e3-option-s2e3en-name="YouTube"
+            data-api-tab-languages-selector-s2e3-option-s2e3en-action="oPmBjotRLb0"
+            data-api-tab-languages-selector-s2e3-option-s2e3en-type="youtube"
+
+            data-api-tab-languages-selector-s2e4-options="s2e4en"
+
+            data-api-tab-languages-selector-s2e4-option-s2e4en-name="YouTube"
+            data-api-tab-languages-selector-s2e4-option-s2e4en-action="r3LDOk6vMp8"
+            data-api-tab-languages-selector-s2e4-option-s2e4en-type="youtube"
+
+            data-api-tab-languages-selector-s2e5-options="s2e5en"
+
+            data-api-tab-languages-selector-s2e5-option-s2e5en-name="YouTube"
+            data-api-tab-languages-selector-s2e5-option-s2e5en-action="PxQ46YpVwz4"
+            data-api-tab-languages-selector-s2e5-option-s2e5en-type="youtube"
+
+            data-api-tab-languages-selector-s2e6-options="s2e6en"
+
+            data-api-tab-languages-selector-s2e6-option-s2e6en-name="YouTube"
+            data-api-tab-languages-selector-s2e6-option-s2e6en-action="hlKiu9vAHs4"
+            data-api-tab-languages-selector-s2e6-option-s2e6en-type="youtube"
+
+            data-api-tab-languages-selector-s2e7-options="s2e7en"
+
+            data-api-tab-languages-selector-s2e7-option-s2e7en-name="YouTube"
+            data-api-tab-languages-selector-s2e7-option-s2e7en-action="wjHlmt3Cbj8"
+            data-api-tab-languages-selector-s2e7-option-s2e7en-type="youtube"
+
+            data-api-tab-languages-selector-s2e8-options="s2e8en"
+
+            data-api-tab-languages-selector-s2e8-option-s2e8en-name="YouTube"
+            data-api-tab-languages-selector-s2e8-option-s2e8en-action="bZoPNQE3CC0"
+            data-api-tab-languages-selector-s2e8-option-s2e8en-type="youtube"
+
+            data-api-tab-languages-selector-s2e9-options="s2e9en"
+
+            data-api-tab-languages-selector-s2e9-option-s2e9en-name="YouTube"
+            data-api-tab-languages-selector-s2e9-option-s2e9en-action="cwpaGhiRUEg"
+            data-api-tab-languages-selector-s2e9-option-s2e9en-type="youtube"
+
+            data-api-tab-languages-selector-s2e10-options="s2e10en"
+
+            data-api-tab-languages-selector-s2e10-option-s2e10en-name="YouTube"
+            data-api-tab-languages-selector-s2e10-option-s2e10en-action="N6rfwQ0Rpwg"
+            data-api-tab-languages-selector-s2e10-option-s2e10en-type="youtube"
+    ></div>
+</div>
+<script src="../cinemaplayer.js"></script>
+</body>
+</html>

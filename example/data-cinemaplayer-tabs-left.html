@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data-cinemaplayer-tabs-left</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play&amp;display=swap">
+    <style>
+        * {
+            font-family: "Play", sans-serif;
+        }
+        body {
+            background: #000;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            width: 700px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>data-cinemaplayer-tabs-left</h1>
+    <div
+            id="cinemaplayer"
+            data-cinemaplayer-tabs-top="15px"
+            data-cinemaplayer-tabs-left="15px"
+            data-cinemaplayer-tabs-right=""
+            data-cinemaplayer-api="api-object.json"
+    ></div>
+</div>
+<script src="../cinemaplayer.js"></script>
+</body>
+</html>

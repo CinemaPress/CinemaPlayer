@@ -1,0 +1,47 @@
+{
+  "api":{
+    "tabs":[
+      "trailers"
+    ],
+    "tab":{
+      "trailers":{
+        "selectors":[
+          "t"
+        ],
+        "selector":{
+          "t":{
+            "options":[
+              "en",
+              "es",
+              "ru",
+              "it"
+            ],
+            "option":{
+              "en":{
+                "name":"English",
+                "action": "LcDQqGJG8pA",
+                "type": "youtube"
+              },
+              "es":{
+                "name":"Español",
+                "thumbnail": "https://img.youtube.com/vi/UzQGVBMkNaI/maxresdefault.jpg",
+                "action": "https://www.youtube.com/embed/UzQGVBMkNaI?autoplay=1&rel=0",
+                "type": "iframe"
+              },
+              "ru":{
+                "name":"Русский",
+                "action": "r5EOmNXGUCY",
+                "type": "youtube"
+              },
+              "it":{
+                "name":"Italiano",
+                "action": "pqv-xSLRvFo",
+                "type": "youtube"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

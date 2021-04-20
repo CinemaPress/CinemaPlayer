@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>data-cinemaplayer-id</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Play&amp;display=swap">
+    <style>
+        * {
+            font-family: "Play", sans-serif;
+        }
+        body {
+            background: #000;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            width: 700px;
+        }
+        .container>a {
+            margin: 10px;
+            padding: 10px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>data-cinemaplayer-id</h1>
+    <a
+            href="javascript:void(0)"
+            data-cinemaplayer-id="show-cobra-episodes"
+            data-cinemaplayer-api="api-episodes.json"
+    >Open episodes</a>
+    |
+    <a
+            href="javascript:void(0)"
+            data-cinemaplayer-id="show-cobra-trailer"
+            data-cinemaplayer-api="api-trailer.json"
+    >Open trailer</a>
+    <br>
+    <br>
+    <div id="show-cobra-episodes"></div>
+    <div id="show-cobra-trailer"></div>
+</div>
+<script src="../cinemaplayer.js"></script>
+</body>
+</html>

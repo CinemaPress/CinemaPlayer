@@ -1,0 +1,27 @@
+{
+  "list": {
+    "items":[
+      {
+        "image": "../images/primevideo.png",
+        "title": "Prime video: Cobra Kai (English) HD",
+        "description": "14,99 USD",
+        "badge": "14,99 USD",
+        "link": "https://www.amazon.com/gp/video/detail/B07QX1SZQK/"
+      },
+      {
+        "image": "../images/AppleTV.png",
+        "title": "AppleTV: Cobra Kai (English) HD",
+        "description": "19,98 USD",
+        "badge": "19,98 USD",
+        "link": "https://itunes.apple.com/us/tv-season/cobra-kai-season-1/id1458515409"
+      },
+      {
+        "image": "../images/GooglePlay.png",
+        "title": "Google Play: Cobra Kai (English) SD",
+        "description": "39,80 USD",
+        "badge": "39,80 USD",
+        "link": "https://play.google.com/store/tv/show/Cobra_Kai?cdid=tvseason-NDeVAXwVxbSdL9hTwmJVQg&id=dc3rqAhmSh7zcRn9Yboajw&hl=en&gl=US"
+      }
+    ]
+  }
+}
