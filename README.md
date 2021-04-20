@@ -389,7 +389,7 @@ Default: [fonts.google.com/specimen/Play](https://fonts.google.com/specimen/Play
 
 - ### Slider
 
-  - API [/CinemaPress/CinemaPlayer/master/api-slider.json](https://raw.githubusercontent.com/CinemaPress/CinemaPlayer/master/api-slider.json)
+  - API [/CinemaPress/CinemaPlayer/master/example/api-slider.json](https://raw.githubusercontent.com/CinemaPress/CinemaPlayer/master/example/api-slider.json)
   - DEMO [CinemaPlayer.github.io/example/api-slider.html](https://CinemaPlayer.github.io/example/api-slider.html)
 
 ```html
@@ -402,7 +402,7 @@ Default: [fonts.google.com/specimen/Play](https://fonts.google.com/specimen/Play
 
 - ### List
 
-  - API [/CinemaPress/CinemaPlayer/master/api-list.json](https://raw.githubusercontent.com/CinemaPress/CinemaPlayer/master/api-list.json)
+  - API [/CinemaPress/CinemaPlayer/master/example/api-list.json](https://raw.githubusercontent.com/CinemaPress/CinemaPlayer/master/example/api-list.json)
   - DEMO [CinemaPlayer.github.io/example/api-list.html](https://CinemaPlayer.github.io/example/api-list.html)
 
 ```html
