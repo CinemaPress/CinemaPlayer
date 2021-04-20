@@ -25,10 +25,10 @@
 ### What API format does the CinemaPlayer accept?
 
 - API OBJECT `main`
-  - API [/CinemaPress/CinemaPlayer/master/api-object.json](https://raw.githubusercontent.com/CinemaPress/CinemaPlayer/master/api-object.json)
+  - API [/CinemaPress/CinemaPlayer/master/example/api-object.json](https://raw.githubusercontent.com/CinemaPress/CinemaPlayer/master/example/api-object.json)
   - DEMO [CinemaPlayer.github.io/example/api-object.html](https://CinemaPlayer.github.io/example/api-object.html)
 - API ARRAY
-  - API [/CinemaPress/CinemaPlayer/master/api-array.json](https://raw.githubusercontent.com/CinemaPress/CinemaPlayer/master/api-array.json)
+  - API [/CinemaPress/CinemaPlayer/master/example/api-array.json](https://raw.githubusercontent.com/CinemaPress/CinemaPlayer/master/example/api-array.json)
   - DEMO [CinemaPlayer.github.io/example/api-array.html](https://CinemaPlayer.github.io/example/api-array.html)
 - API HTML
   - API [/CinemaPress/CinemaPlayer/master/example/api-html.html](https://raw.githubusercontent.com/CinemaPress/CinemaPlayer/master/example/api-html.html)
