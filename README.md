@@ -250,6 +250,19 @@ Default: [fonts.google.com/specimen/Play](https://fonts.google.com/specimen/Play
 <script src="https://CinemaPlayer.github.io/cinemaplayer.js"></script>
 ```
 
+- #### `data-cinemaplayer-query-api-*`
+
+Add query to API: `https://CinemaPlayer.github.io/example/api-object.json?imdb_id=tt7221388`
+
+```html
+<div 
+    id="cinemaplayer"
+    data-cinemaplayer-query-api-imdb_id="tt7221388"
+    data-cinemaplayer-api="https://CinemaPlayer.github.io/example/api-object.json"
+></div>
+<script src="https://CinemaPlayer.github.io/cinemaplayer.js"></script>
+```
+
 ### What API format for CinemaPlayer?
 
 - #### Object API `main`
