@@ -797,12 +797,104 @@ function cinemaPlayerApiFormat(raw) {
           });
         });
       }
+    } else if (
+        typeof cinemaPlayerRaw === 'object' &&
+        typeof cinemaPlayerRaw['simple-api'] === 'object' &&
+        Array.isArray(cinemaPlayerRaw['simple-api'])
+    ) {
+      cinemaPlayerObj.api.tabs = [];
+      cinemaPlayerObj.api.tab = {};
+      cinemaPlayerRaw['simple-api'].forEach(function(obj) {
+        var tab, selector, option, param = {};
+        var season = '', episode = '', name = '';
+        if (obj['season'] && (obj['season'] + '').replace(/[^0-9]/g, '')) {
+          season = (obj['season'] + '').replace(/[^0-9]/g, '');
+        }
+        if (obj['episode'] && (obj['episode'] + '').replace(/[^0-9]/g, '')) {
+          episode = (obj['episode'] + '').replace(/[^0-9]/g, '');
+        }
+        if (obj['name']) {
+          name = (obj['name'] + '');
+        }
+        if (season) {
+          param = {};
+          param.name = obj['season-name'] ? obj['season-name'].replace('[N]', season) : 'Season ' + season;
+          tab = 'seasons';
+          selector = 's';
+          option = selector + season;
+          cinemaPlayerApiFormatStructure(cinemaPlayerObj, tab, selector, option, param);
+        }
+        if (episode) {
+          param = {};
+          param.name = obj['episode-name'] ? obj['episode-name'].replace('[N]', episode) : 'Episode ' + episode;
+          tab = 'episodes';
+          selector = 's' + season;
+          option = selector + 'e' + episode;
+          cinemaPlayerApiFormatStructure(cinemaPlayerObj, tab, selector, option, param);
+        }
+        if (name) {
+          param = {};
+          param.name = (name + '');
+          if (obj['iframe']) {
+            param.action = obj['iframe'];
+            param.type = 'iframe';
+          }
+          else if (obj['link']) {
+            param.action = obj['link'];
+            param.type = 'link';
+          }
+          else if (obj['youtube']) {
+            param.action = obj['youtube'];
+            param.type = 'youtube';
+          }
+          if (obj['image']) {
+            param.thumbnail = obj['image'];
+          }
+          tab = 'names';
+          selector = 's' + season + 'e' + episode;
+          option = selector + 'n' + cinemaPlayerHashCode(name);
+          cinemaPlayerApiFormatStructure(cinemaPlayerObj, tab, selector, option, param);
+        }
+      });
     }
   } catch (e) {
     console.error(e);
   }
   cinemaPlayerData = Object.assign({}, cinemaPlayerData, cinemaPlayerObj);
   cinemaPlayerTimeout = parseInt(cinemaPlayerData['cinemaplayer']['tabs']['open']['last']);
+}
+
+function cinemaPlayerApiFormatStructure(cinemaPlayerObj, tab, selector, option, param) {
+  if (cinemaPlayerObj.api.tabs.indexOf(tab) === -1) {
+    cinemaPlayerObj.api.tabs.push(tab);
+  }
+  if (typeof cinemaPlayerObj.api.tab[tab] === 'undefined') {
+    cinemaPlayerObj.api.tab[tab] = {};
+  }
+  if (typeof cinemaPlayerObj.api.tab[tab].selectors === 'undefined') {
+    cinemaPlayerObj.api.tab[tab].selectors = [];
+  }
+  if (cinemaPlayerObj.api.tab[tab].selectors.indexOf(selector) === -1) {
+    cinemaPlayerObj.api.tab[tab].selectors.push(selector);
+  }
+  if (typeof cinemaPlayerObj.api.tab[tab].selector === 'undefined') {
+    cinemaPlayerObj.api.tab[tab].selector = {};
+  }
+  if (typeof cinemaPlayerObj.api.tab[tab].selector[selector] === 'undefined') {
+    cinemaPlayerObj.api.tab[tab].selector[selector] = {};
+  }
+  if (typeof cinemaPlayerObj.api.tab[tab].selector[selector].options === 'undefined') {
+    cinemaPlayerObj.api.tab[tab].selector[selector].options = [];
+  }
+  if (cinemaPlayerObj.api.tab[tab].selector[selector].options.indexOf(option) === -1) {
+    cinemaPlayerObj.api.tab[tab].selector[selector].options.push(option);
+  }
+  if (typeof cinemaPlayerObj.api.tab[tab].selector[selector].option === 'undefined') {
+    cinemaPlayerObj.api.tab[tab].selector[selector].option = {};
+  }
+  if (typeof cinemaPlayerObj.api.tab[tab].selector[selector].option[option] === 'undefined') {
+    cinemaPlayerObj.api.tab[tab].selector[selector].option[option] = param;
+  }
 }
 
 function cinemaPlayerAttr(elem) {
@@ -1358,6 +1450,17 @@ function cinemaPlayerListInit(listContainer) {
       }
     }
   });
+}
+
+function cinemaPlayerHashCode(str) {
+  var hash = 0, i, char;
+  if (str.length === 0) return hash;
+  for (i = 0; i < str.length; i++) {
+    char = str.charCodeAt(i);
+    hash = ((hash<<5)-hash)+char;
+    hash = hash & hash;
+  }
+  return hash;
 }
 
 (function() {

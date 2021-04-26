@@ -22,17 +22,23 @@
 - Example Episodes Playlist: [CinemaPlayer.github.io/example/api-episodes.html](https://CinemaPlayer.github.io/example/api-episodes.html)
 - Example Multiple Sources: [CinemaPlayer.github.io/example/api-trailer.html](https://CinemaPlayer.github.io/example/api-trailer.html)
 
-### What API format does the CinemaPlayer accept?
+### What advanced API format does the CinemaPlayer accept?
 
-- API OBJECT `main`
+- ADVANCED API OBJECT `main`
   - API [/CinemaPress/CinemaPlayer/master/example/api-object.json](https://raw.githubusercontent.com/CinemaPress/CinemaPlayer/master/example/api-object.json)
   - DEMO [CinemaPlayer.github.io/example/api-object.html](https://CinemaPlayer.github.io/example/api-object.html)
-- API ARRAY
+- ADVANCED API ARRAY
   - API [/CinemaPress/CinemaPlayer/master/example/api-array.json](https://raw.githubusercontent.com/CinemaPress/CinemaPlayer/master/example/api-array.json)
   - DEMO [CinemaPlayer.github.io/example/api-array.html](https://CinemaPlayer.github.io/example/api-array.html)
-- API HTML
+- ADVANCED API HTML
   - API [/CinemaPress/CinemaPlayer/master/example/api-html.html](https://raw.githubusercontent.com/CinemaPress/CinemaPlayer/master/example/api-html.html)
   - DEMO [CinemaPlayer.github.io/example/api-html.html](https://CinemaPlayer.github.io/example/api-html.html)
+
+### What simple API format does the CinemaPlayer accept?
+
+- SIMPLE API ARRAY
+  - API [/CinemaPress/CinemaPlayer/master/example/simple-api-array.json](https://raw.githubusercontent.com/CinemaPress/CinemaPlayer/master/example/simple-api-array.json)
+  - DEMO [CinemaPlayer.github.io/example/simple-api-array.html](https://CinemaPlayer.github.io/example/simple-api-array.html)
 
 ### What parameters does the CinemaPlayer have?
 
@@ -263,7 +269,7 @@ Add query to API: `https://CinemaPlayer.github.io/example/api-object.json?imdb_i
 <script src="https://CinemaPlayer.github.io/cinemaplayer.js"></script>
 ```
 
-### What API format for CinemaPlayer?
+### What advanced API format for CinemaPlayer?
 
 - #### Object API `main`
 
@@ -397,6 +403,79 @@ Add query to API: `https://CinemaPlayer.github.io/example/api-object.json?imdb_i
 - `action` - option action `youtube key`, `url`
 - `type` - option type `youtube`, `iframe`, `link`
 - `thumbnail` - option thumbnail `image url`
+
+### What simple API format for CinemaPlayer?
+
+- #### Simple API for episodes playlist
+
+Example: [CinemaPlayer.github.io/example/simple-api-episodes.html](https://CinemaPlayer.github.io/example/simple-api-episodes.html)
+
+```json
+{
+  "simple-api":[
+    {
+      "name":"YouTube",
+      "season":"1",
+      "episode":"1",
+      "iframe":"https://www.youtube.com/embed/_rB36UGoP4Y?autoplay=1&rel=0",
+      "image":"https://img.youtube.com/vi/_rB36UGoP4Y/maxresdefault.jpg"
+    },
+    {
+      "name":"YouTube",
+      "season":"1",
+      "episode":"2",
+      "iframe":"https://www.youtube.com/embed/1Aoc-cd9eYs?autoplay=1&rel=0",
+      "image":"https://img.youtube.com/vi/1Aoc-cd9eYs/maxresdefault.jpg"
+    },
+    {
+      "name":"YouTube",
+      "season":"1",
+      "episode":"3",
+      "iframe":"https://www.youtube.com/embed/9z1nTwP2n0w?autoplay=1&rel=0",
+      "image":"https://img.youtube.com/vi/9z1nTwP2n0w/maxresdefault.jpg"
+    }
+  ]
+}
+```
+
+- #### Simple API for multiple sources
+
+Example: [CinemaPlayer.github.io/example/simple-api-trailer.html](https://CinemaPlayer.github.io/example/simple-api-trailer.html)
+
+```json
+{
+  "simple-api":[
+    {
+      "name":"English",
+      "iframe":"https://www.youtube.com/embed/LcDQqGJG8pA?autoplay=1&rel=0",
+      "image":"https://img.youtube.com/vi/LcDQqGJG8pA/maxresdefault.jpg"
+    },
+    {
+      "name":"Español",
+      "iframe":"https://www.youtube.com/embed/UzQGVBMkNaI?autoplay=1&rel=0",
+      "image":"https://img.youtube.com/vi/UzQGVBMkNaI/maxresdefault.jpg"
+    },
+    {
+      "name":"Русский",
+      "iframe":"https://www.youtube.com/embed/r5EOmNXGUCY?autoplay=1&rel=0",
+      "image":"https://img.youtube.com/vi/r5EOmNXGUCY/maxresdefault.jpg"
+    },
+    {
+      "name":"Italiano",
+      "iframe":"https://www.youtube.com/embed/pqv-xSLRvFo?autoplay=1&rel=0",
+      "image":"https://img.youtube.com/vi/pqv-xSLRvFo/maxresdefault.jpg"
+    }
+  ]
+}
+```
+
+- `name` - option name `string`
+- `season` - option season `number`
+- `episode` - option episode `number`
+- `image` - option image `url`
+- `iframe` - option iframe `url`
+- `link` - option link `url`
+- `youtube` - option youtube `youtube key`
 
 ## What other features does the CinemaPlayer have?
 
