@@ -96,6 +96,7 @@ Example: [CinemaPlayer.github.io/example/data-cinemaplayer-id-active.html](https
 - #### `data-cinemaplayer-loader-background-color`
 - #### `data-cinemaplayer-loader-background-image`
 - #### `data-cinemaplayer-loader-timeout`
+- #### `data-cinemaplayer-loader-display`
 
 Example: [CinemaPlayer.github.io/example/data-cinemaplayer-loader.html](https://CinemaPlayer.github.io/example/data-cinemaplayer-loader.html)
 
@@ -105,6 +106,7 @@ Example: [CinemaPlayer.github.io/example/data-cinemaplayer-loader.html](https://
     data-cinemaplayer-loader-background-color="black"
     data-cinemaplayer-loader-background-image="https://CinemaPlayer.github.io/images/loader.svg"
     data-cinemaplayer-loader-timeout="10"
+    data-cinemaplayer-loader-display="block"
     data-cinemaplayer-api="https://CinemaPlayer.github.io/example/api-object.json"
 ></div>
 <script src="https://CinemaPlayer.github.io/cinemaplayer.js"></script>

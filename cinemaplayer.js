@@ -57,6 +57,10 @@ function cinemaPlayerInit(elem) {
       "value":"0"
     },
     {
+      "name":"data-cinemaplayer-loader-display",
+      "value":"block"
+    },
+    {
       "name":"data-cinemaplayer-play-color",
       "value":"#1a2035"
     },
@@ -406,6 +410,9 @@ function cinemaPlayerInit(elem) {
 
   l = document.createElement('div');
   l.setAttribute('id', 'cinemaplayer-loader');
+  if (d['cinemaplayer']['loader']['display'] && d['cinemaplayer']['loader']['display'] !== 'block') {
+    l.style.display = d['cinemaplayer']['loader']['display'];
+  }
   cinemaplayer.innerHTML = '';
   cinemaplayer.appendChild(l);
 
