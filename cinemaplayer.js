@@ -665,7 +665,9 @@ function cinemaPlayerTab(selected) {
           option_element.setAttribute('selected', 'selected');
           cinemaPlayerAction(opt[option]);
         }
-        selector_element.appendChild(option_element);
+        if (opt[option].name.toUpperCase() !== 'HIDE') {
+          selector_element.appendChild(option_element);
+        }
       });
       selector_element.addEventListener('change', cinemaPlayerEvent, false);
       custom_select.appendChild(selector_element);
@@ -815,6 +817,14 @@ function cinemaPlayerApiFormat(raw) {
         }
         if (obj['name']) {
           name = (obj['name'] + '');
+        }
+        if (!name) {
+          if (cinemaPlayerRaw['simple-api'].length === 1) {
+            name = 'hide';
+          } else if (obj['iframe']) {
+            var matches = obj['iframe'].match(/^https?:\/\/([^\/?#]+)(?:[\/?#]|$)/i);
+            name = (matches && matches[1]) || '';
+          }
         }
         if (season) {
           param = {};
