@@ -609,7 +609,9 @@ function cinemaPlayerTab(selected) {
       ) {
         return;
       }
-      var options = cinemaPlayerKeys(cinemaPlayerData.api.tab[tab].selector[selector].options).sort();
+      var options = tab === 'names'
+          ? cinemaPlayerKeys(cinemaPlayerData.api.tab[tab].selector[selector].options)
+          : cinemaPlayerKeys(cinemaPlayerData.api.tab[tab].selector[selector].options).sort();
       options.forEach(function(option) {
         if (!cinemaPlayerData.api.tab[tab].selected) {
           cinemaPlayerData.api.tab[tab].selected = prev_selector || option;
