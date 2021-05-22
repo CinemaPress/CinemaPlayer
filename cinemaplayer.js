@@ -1363,7 +1363,9 @@ function cinemaPlayerListInit(listContainer) {
             '  display: table-cell;' +
             '  vertical-align: middle;' +
             '  border: 0;' +
-            '  width: 70px' +
+            '  width: 70px;' +
+            '  text-align: left;' +
+            '  line-height: 0;' +
             '}' +
             '.cinemaplayer-list-item-center {' +
             '  display: table-cell;' +
@@ -1375,6 +1377,8 @@ function cinemaPlayerListInit(listContainer) {
             '  vertical-align: middle;' +
             '  border: 0;' +
             '  width: 25%;' +
+            '  text-align: right;' +
+            '  padding-right: 5px;' +
             '}' +
             '.cinemaplayer-list-item-title {' +
             '  display: block;' +
@@ -1440,17 +1444,17 @@ function cinemaPlayerListInit(listContainer) {
           tdLeft.setAttribute('class', 'cinemaplayer-list-item-left');
           var tdItemImg = document.createElement('img');
           tdItemImg.setAttribute('class', 'cinemaplayer-list-item-image');
-          tdItemImg.src = item.image;
+          tdItemImg.src = item.image || '';
           tdLeft.appendChild(tdItemImg);
           trItem.appendChild(tdLeft);
           var tdCenter = document.createElement('td');
           tdCenter.setAttribute('class', 'cinemaplayer-list-item-center');
           var tdItemTitle = document.createElement('span');
           tdItemTitle.setAttribute('class', 'cinemaplayer-list-item-title');
-          tdItemTitle.innerHTML = item.title;
+          tdItemTitle.innerHTML = item.title || '';
           var tdItemDescription = document.createElement('small');
           tdItemDescription.setAttribute('class', 'cinemaplayer-list-item-description');
-          tdItemDescription.innerHTML = item.description;
+          tdItemDescription.innerHTML = item.description || '';
           tdCenter.appendChild(tdItemTitle);
           tdCenter.appendChild(tdItemDescription);
           trItem.appendChild(tdCenter);
@@ -1458,8 +1462,8 @@ function cinemaPlayerListInit(listContainer) {
           tdRight.setAttribute('class', 'cinemaplayer-list-item-right');
           var tdItemBadge = document.createElement('a');
           tdItemBadge.setAttribute('class', 'cinemaplayer-list-item-badge');
-          tdItemBadge.href = item.link;
-          tdItemBadge.innerHTML = item.badge;
+          tdItemBadge.href = item.link || '';
+          tdItemBadge.innerHTML = item.badge || '';
           if (listBlank) { tdItemBadge.setAttribute('target', '_blank'); }
           tdRight.appendChild(tdItemBadge);
           trItem.appendChild(tdRight);
