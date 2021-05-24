@@ -305,7 +305,7 @@ function cinemaPlayerInit(elem) {
       '        right: 0;' +
       '        max-height: ' + d['cinemaplayer']['tabs']['height'] + ';' +
       '        overflow-y: auto;' +
-      '        z-index: 99;' +
+      '        z-index: 2;' +
       '        margin-top: 5px;' +
       '    }' +
       '' +
@@ -340,7 +340,7 @@ function cinemaPlayerInit(elem) {
       '    }' +
       '' +
       '    #cinemaplayer-loader {' +
-      '        z-index: 9999;' +
+      '        z-index: 3;' +
       '        position: absolute;' +
       '        left: 0;' +
       '        top: 0;' +
