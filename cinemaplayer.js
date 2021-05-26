@@ -65,6 +65,14 @@ function cinemaPlayerInit(elem) {
       "value":"#1a2035"
     },
     {
+      "name":"data-cinemaplayer-play-border-radius",
+      "value":"10px"
+    },
+    {
+      "name":"data-cinemaplayer-play-padding",
+      "value":"25px 50px"
+    },
+    {
       "name":"data-cinemaplayer-tabs-unique",
       "value":((window && window.location && window.location.pathname) || "") + cinemaPlayerData.id
     },
@@ -369,9 +377,9 @@ function cinemaPlayerInit(elem) {
       '    .cinemaplayer-thumbnail span {' +
       '        background: ' + d['cinemaplayer']['play']['color'] + ';' +
       '        display: inline-block;' +
-      '        padding: 25px 50px;' +
+      '        padding: ' + d['cinemaplayer']['play']['padding'] + ';' +
       '        position: absolute;' +
-      '        border-radius: 10px;' +
+      '        border-radius: ' + d['cinemaplayer']['play']['border']['radius'] + ';' +
       '        opacity: .8;' +
       '        top: 50%;' +
       '        left: 50%;' +

@@ -113,6 +113,8 @@ Example: [CinemaPlayer.github.io/example/data-cinemaplayer-loader.html](https://
 ```
 
 - #### `data-cinemaplayer-play-color`
+- #### `data-cinemaplayer-play-padding`
+- #### `data-cinemaplayer-play-border-radius`
 
 Example: [CinemaPlayer.github.io/example/data-cinemaplayer-play-color.html](https://CinemaPlayer.github.io/example/data-cinemaplayer-play-color.html)
 
@@ -120,6 +122,8 @@ Example: [CinemaPlayer.github.io/example/data-cinemaplayer-play-color.html](http
 <div 
     id="cinemaplayer"
     data-cinemaplayer-play-color="red"
+    data-cinemaplayer-play-padding="35px"
+    data-cinemaplayer-play-border-radius="100%"
     data-cinemaplayer-api="https://CinemaPlayer.github.io/example/api-object.json"
 ></div>
 <script src="https://CinemaPlayer.github.io/cinemaplayer.js"></script>
