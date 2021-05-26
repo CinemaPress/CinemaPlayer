@@ -938,7 +938,7 @@ function cinemaPlayerAttr(elem) {
               .substr(5)
               .replace(/-/g, '.')
               .toLowerCase(),
-          decodeURIComponent(a.value)
+          decodeURIComponent(a.value.replace(/%(?![0-9][0-9a-fA-F]+)/g, '%25'))
       );
     }
   }, {});
