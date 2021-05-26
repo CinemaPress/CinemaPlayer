@@ -444,6 +444,21 @@ Example: [CinemaPlayer.github.io/example/simple-api-episodes.html](https://Cinem
 }
 ```
 
+- #### `data-cinemaplayer-select-season`
+- #### `data-cinemaplayer-select-episode`
+
+Example: [CinemaPlayer.github.io/example/data-cinemaplayer-select.html](https://CinemaPlayer.github.io/example/data-cinemaplayer-select.html)
+
+```html
+<div 
+    id="cinemaplayer"
+    data-cinemaplayer-select-season="1"
+    data-cinemaplayer-select-episode="6"
+    data-cinemaplayer-api="https://CinemaPlayer.github.io/example/simple-api-episodes.json"
+></div>
+<script src="https://CinemaPlayer.github.io/cinemaplayer.js"></script>
+```
+
 - #### Simple API for multiple sources
 
 Example: [CinemaPlayer.github.io/example/simple-api-trailer.html](https://CinemaPlayer.github.io/example/simple-api-trailer.html)

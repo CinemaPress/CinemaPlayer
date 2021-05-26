@@ -165,7 +165,11 @@ function cinemaPlayerInit(elem) {
       "value":"#000"
     },
     {
-      "name":"data-cinemaplayer-background-image",
+      "name":"data-cinemaplayer-select-season",
+      "value":""
+    },
+    {
+      "name":"data-cinemaplayer-select-episode",
       "value":""
     }
   ]);
@@ -508,6 +512,21 @@ function cinemaPlayerInit(elem) {
       ? JSON.parse(cinemaPlayerSave.getItem(d['cinemaplayer']['tabs']['unique']) || '{}')
       : {};
 
+  if (
+      d['cinemaplayer']['select'] &&
+      d['cinemaplayer']['select']['season'] &&
+      d['cinemaplayer']['select']['episode'] &&
+      d['cinemaplayer']['select']['season'].replace(/[^0-9]/i, '') &&
+      d['cinemaplayer']['select']['episode'].replace(/[^0-9]/i, '')
+  ) {
+    selected = {
+      tab: 'episodes',
+      active: 's' + d['cinemaplayer']['select']['season'].replace(/[^0-9]/i, ''),
+      selected: 's' + d['cinemaplayer']['select']['season'].replace(/[^0-9]/i, '') +
+          'e' + d['cinemaplayer']['select']['episode'].replace(/[^0-9]/i, '')
+    };
+  }
+
   if (d['cinemaplayer']['api']) {
     if (
         d['cinemaplayer']['query'] &&
@@ -568,7 +587,13 @@ function cinemaPlayerTab(selected) {
         delete cinemaPlayerData.api.tab[tab].selected;
       }
     });
-    if (cinemaPlayerData.api.tab[selected.tab]) {
+    if (
+        cinemaPlayerData.api.tab[selected.tab] &&
+        cinemaPlayerData.api.tab[selected.tab].selector &&
+        cinemaPlayerData.api.tab[selected.tab].selector[selected.active] &&
+        cinemaPlayerData.api.tab[selected.tab].selector[selected.active].option &&
+        cinemaPlayerData.api.tab[selected.tab].selector[selected.active].option[selected.selected]
+    ) {
       cinemaPlayerData.api.tab[selected.tab].active = selected.active;
       cinemaPlayerData.api.tab[selected.tab].selected = selected.selected;
     }
