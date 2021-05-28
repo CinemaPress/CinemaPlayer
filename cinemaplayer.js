@@ -1135,7 +1135,7 @@ function cinemaPlayerCloseAllSelect(e) {
     } else {
       y[i].classList.remove('select-arrow-active');
       if (cinemaPlayerData['cinemaplayer']['tabs']['mobile']['width']) {
-        if (cinemaPlayerData['width'] && cinemaPlayerData['width'] < 610) {
+        if (cinemaPlayerData['width'] && cinemaPlayerData['width'] < 480) {
           y[i].style.color = cinemaPlayerData['cinemaplayer']['tabs']['background'];
           y[i].parentNode.style.width = cinemaPlayerData['cinemaplayer']['tabs']['mobile']['width'];
         } else {
