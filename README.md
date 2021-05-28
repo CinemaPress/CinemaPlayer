@@ -42,6 +42,8 @@
 
 ### What parameters does the CinemaPlayer have?
 
+![CinemaPlayer data-cinemaplayer-id](https://raw.githubusercontent.com/CinemaPlayer/CinemaPlayer.github.io/master/images/data-cinemaplayer-id.png)
+
 - #### `data-cinemaplayer-id`
 
 Example: [CinemaPlayer.github.io/example/data-cinemaplayer-id.html](https://CinemaPlayer.github.io/example/data-cinemaplayer-id.html)
@@ -93,6 +95,8 @@ Example: [CinemaPlayer.github.io/example/data-cinemaplayer-id-active.html](https
 <script src="https://CinemaPlayer.github.io/cinemaplayer.js"></script>
 ```
 
+![CinemaPlayer data-cinemaplayer-loader](https://raw.githubusercontent.com/CinemaPlayer/CinemaPlayer.github.io/master/images/data-cinemaplayer-loader.png)
+
 - #### `data-cinemaplayer-loader-background-color`
 - #### `data-cinemaplayer-loader-background-image`
 - #### `data-cinemaplayer-loader-timeout`
@@ -112,6 +116,8 @@ Example: [CinemaPlayer.github.io/example/data-cinemaplayer-loader.html](https://
 <script src="https://CinemaPlayer.github.io/cinemaplayer.js"></script>
 ```
 
+![CinemaPlayer data-cinemaplayer-play-color](https://raw.githubusercontent.com/CinemaPlayer/CinemaPlayer.github.io/master/images/data-cinemaplayer-play-color.png)
+
 - #### `data-cinemaplayer-play-color`
 - #### `data-cinemaplayer-play-padding`
 - #### `data-cinemaplayer-play-border-radius`
@@ -128,6 +134,8 @@ Example: [CinemaPlayer.github.io/example/data-cinemaplayer-play-color.html](http
 ></div>
 <script src="https://CinemaPlayer.github.io/cinemaplayer.js"></script>
 ```
+
+![CinemaPlayer data-cinemaplayer-tabs-border](https://raw.githubusercontent.com/CinemaPlayer/CinemaPlayer.github.io/master/images/data-cinemaplayer-tabs-border.png)
 
 - #### `data-cinemaplayer-tabs-border-width`
 - #### `data-cinemaplayer-tabs-border-color`
@@ -159,6 +167,8 @@ Example: [CinemaPlayer.github.io/example/data-cinemaplayer-tabs-event.html](http
 <script src="https://CinemaPlayer.github.io/cinemaplayer.js"></script>
 ```
 
+![CinemaPlayer data-cinemaplayer-tabs-left](https://raw.githubusercontent.com/CinemaPlayer/CinemaPlayer.github.io/master/images/data-cinemaplayer-tabs-left.png)
+
 - #### `data-cinemaplayer-tabs-top`
 - #### `data-cinemaplayer-tabs-right`
 - #### `data-cinemaplayer-tabs-left`
@@ -175,6 +185,8 @@ Example: [CinemaPlayer.github.io/example/data-cinemaplayer-tabs-left.html](https
 ></div>
 <script src="https://CinemaPlayer.github.io/cinemaplayer.js"></script>
 ```
+
+![CinemaPlayer data-cinemaplayer-tabs](https://raw.githubusercontent.com/CinemaPlayer/CinemaPlayer.github.io/master/images/data-cinemaplayer-tabs.png)
 
 - #### `data-cinemaplayer-tabs-font-size`
 - #### `data-cinemaplayer-tabs-width`
@@ -222,6 +234,8 @@ Example: [CinemaPlayer.github.io/example/data-cinemaplayer-tabs-open-last.html](
 ></div>
 <script src="https://CinemaPlayer.github.io/cinemaplayer.js"></script>
 ```
+
+![CinemaPlayer data-cinemaplayer-iframe-mobile-width](https://raw.githubusercontent.com/CinemaPlayer/CinemaPlayer.github.io/master/images/data-cinemaplayer-iframe-mobile-width.png)
 
 - #### `data-cinemaplayer-tabs-mobile-width`
 - #### `data-cinemaplayer-iframe-mobile-width`
@@ -517,6 +531,8 @@ Example: [CinemaPlayer.github.io/example/simple-api-trailer.html](https://Cinema
 
 - ### Slider
 
+![CinemaPlayer data-cinemaplayer-slider](https://raw.githubusercontent.com/CinemaPlayer/CinemaPlayer.github.io/master/images/data-cinemaplayer-slider.png)
+
   - API [/CinemaPress/CinemaPlayer/master/example/api-slider.json](https://raw.githubusercontent.com/CinemaPress/CinemaPlayer/master/example/api-slider.json)
   - DEMO [CinemaPlayer.github.io/example/api-slider.html](https://CinemaPlayer.github.io/example/api-slider.html)
 
@@ -529,6 +545,8 @@ Example: [CinemaPlayer.github.io/example/simple-api-trailer.html](https://Cinema
 ```
 
 - ### List
+
+![CinemaPlayer data-cinemaplayer-list](https://raw.githubusercontent.com/CinemaPlayer/CinemaPlayer.github.io/master/images/data-cinemaplayer-list.png)
 
   - API [/CinemaPress/CinemaPlayer/master/example/api-list.json](https://raw.githubusercontent.com/CinemaPress/CinemaPlayer/master/example/api-list.json)
   - DEMO [CinemaPlayer.github.io/example/api-list.html](https://CinemaPlayer.github.io/example/api-list.html)
