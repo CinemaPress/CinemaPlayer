@@ -187,7 +187,6 @@ Example: [CinemaPlayer.github.io/example/data-cinemaplayer-tabs-left.html](https
 - #### `data-cinemaplayer-tabs-scrollbar-color`
 - #### `data-cinemaplayer-tabs-arrow-close-color`
 - #### `data-cinemaplayer-tabs-arrow-open-color`
-- #### `data-cinemaplayer-tabs-mobile-width`
 
 Example: [CinemaPlayer.github.io/example/data-cinemaplayer-tabs.html](https://CinemaPlayer.github.io/example/data-cinemaplayer-tabs.html)
 
@@ -206,7 +205,6 @@ Example: [CinemaPlayer.github.io/example/data-cinemaplayer-tabs.html](https://Ci
     data-cinemaplayer-tabs-scrollbar-color="yellow"
     data-cinemaplayer-tabs-arrow-close-color="red"
     data-cinemaplayer-tabs-arrow-open-color="blue"
-    data-cinemaplayer-tabs-mobile-width="33px"
     data-cinemaplayer-api="https://CinemaPlayer.github.io/example/api-object.json"
 ></div>
 <script src="https://CinemaPlayer.github.io/cinemaplayer.js"></script>
@@ -220,6 +218,21 @@ Example: [CinemaPlayer.github.io/example/data-cinemaplayer-tabs-open-last.html](
 <div 
     id="cinemaplayer"
     data-cinemaplayer-tabs-open-last="0"
+    data-cinemaplayer-api="https://CinemaPlayer.github.io/example/api-object.json"
+></div>
+<script src="https://CinemaPlayer.github.io/cinemaplayer.js"></script>
+```
+
+- #### `data-cinemaplayer-tabs-mobile-width`
+- #### `data-cinemaplayer-iframe-mobile-width`
+
+Example: [CinemaPlayer.github.io/example/data-cinemaplayer-iframe-mobile-width.html](https://CinemaPlayer.github.io/example/data-cinemaplayer-iframe-mobile-width.html)
+
+```html
+<div
+    id="cinemaplayer"
+    data-cinemaplayer-tabs-mobile-width="33px"
+    data-cinemaplayer-iframe-mobile-width="480px"
     data-cinemaplayer-api="https://CinemaPlayer.github.io/example/api-object.json"
 ></div>
 <script src="https://CinemaPlayer.github.io/cinemaplayer.js"></script>

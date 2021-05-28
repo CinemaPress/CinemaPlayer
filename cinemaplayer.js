@@ -165,6 +165,10 @@ function cinemaPlayerInit(elem) {
       "value":"33px"
     },
     {
+      "name":"data-cinemaplayer-iframe-mobile-width",
+      "value":"480px"
+    },
+    {
       "name":"data-cinemaplayer-background-color",
       "value":"#000"
     },
@@ -1135,7 +1139,7 @@ function cinemaPlayerCloseAllSelect(e) {
     } else {
       y[i].classList.remove('select-arrow-active');
       if (cinemaPlayerData['cinemaplayer']['tabs']['mobile']['width']) {
-        if (cinemaPlayerData['width'] && cinemaPlayerData['width'] < 480) {
+        if (cinemaPlayerData['width'] && cinemaPlayerData['width'] < parseInt(cinemaPlayerData['cinemaplayer']['iframe']['mobile']['width'])) {
           y[i].style.color = cinemaPlayerData['cinemaplayer']['tabs']['background'];
           y[i].parentNode.style.width = cinemaPlayerData['cinemaplayer']['tabs']['mobile']['width'];
         } else {
