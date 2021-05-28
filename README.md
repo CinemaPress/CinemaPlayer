@@ -187,6 +187,7 @@ Example: [CinemaPlayer.github.io/example/data-cinemaplayer-tabs-left.html](https
 - #### `data-cinemaplayer-tabs-scrollbar-color`
 - #### `data-cinemaplayer-tabs-arrow-close-color`
 - #### `data-cinemaplayer-tabs-arrow-open-color`
+- #### `data-cinemaplayer-tabs-mobile-width`
 
 Example: [CinemaPlayer.github.io/example/data-cinemaplayer-tabs.html](https://CinemaPlayer.github.io/example/data-cinemaplayer-tabs.html)
 
@@ -205,6 +206,7 @@ Example: [CinemaPlayer.github.io/example/data-cinemaplayer-tabs.html](https://Ci
     data-cinemaplayer-tabs-scrollbar-color="yellow"
     data-cinemaplayer-tabs-arrow-close-color="red"
     data-cinemaplayer-tabs-arrow-open-color="blue"
+    data-cinemaplayer-tabs-mobile-width="33px"
     data-cinemaplayer-api="https://CinemaPlayer.github.io/example/api-object.json"
 ></div>
 <script src="https://CinemaPlayer.github.io/cinemaplayer.js"></script>

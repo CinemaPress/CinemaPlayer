@@ -161,6 +161,10 @@ function cinemaPlayerInit(elem) {
       "value":"#CCC"
     },
     {
+      "name":"data-cinemaplayer-tabs-mobile-width",
+      "value":"33px"
+    },
+    {
       "name":"data-cinemaplayer-background-color",
       "value":"#000"
     },
@@ -494,6 +498,9 @@ function cinemaPlayerInit(elem) {
   } else {
     h = w / 2;
   }
+
+  cinemaPlayerData['width'] = w;
+  cinemaPlayerData['height'] = h;
 
   var styles = [];
   styles.push('width:' + w + 'px');
@@ -1095,6 +1102,8 @@ function cinemaPlayerSelect() {
       cinemaPlayerCloseAllSelect(this);
       this.nextSibling.classList.toggle('cinemaplayer-select-hide');
       this.classList.toggle('select-arrow-active');
+      this.style.color = cinemaPlayerData['cinemaplayer']['tabs']['color'];
+      this.parentNode.style.width = cinemaPlayerData['cinemaplayer']['tabs']['width'];
     });
     if (i === l - 1 && ll <= 1) {
       cinemaPlayerTimeout = 0;
@@ -1108,6 +1117,8 @@ function cinemaPlayerSelect() {
           cinemaPlayerCloseAllSelect();
         }
       }, parseInt(cinemaPlayerData['cinemaplayer']['tabs']['open']['last']) * 1000);
+    } else {
+      cinemaPlayerCloseAllSelect();
     }
   }
 }
@@ -1120,9 +1131,18 @@ function cinemaPlayerCloseAllSelect(e) {
   yl = y.length;
   for (i = 0; i < yl; i++) {
     if (e && e === y[i]) {
-      arrNo.push(i)
+      arrNo.push(i);
     } else {
       y[i].classList.remove('select-arrow-active');
+      if (cinemaPlayerData['cinemaplayer']['tabs']['mobile']['width']) {
+        if (cinemaPlayerData['width'] && cinemaPlayerData['width'] < 610) {
+          y[i].style.color = cinemaPlayerData['cinemaplayer']['tabs']['background'];
+          y[i].parentNode.style.width = cinemaPlayerData['cinemaplayer']['tabs']['mobile']['width'];
+        } else {
+          y[i].style.color = cinemaPlayerData['cinemaplayer']['tabs']['color'];
+          y[i].parentNode.style.width = cinemaPlayerData['cinemaplayer']['tabs']['width'];
+        }
+      }
     }
   }
   for (i = 0; i < xl; i++) {
@@ -1152,6 +1172,8 @@ function cinemaPlayerOrientation() {
   if (ci.parentNode && ci.parentNode.style) {
     ci.parentNode.style.width = w + 'px';
   }
+  cinemaPlayerData['width'] = w;
+  cinemaPlayerCloseAllSelect();
 }
 
 function cinemaPlayerRequest(url, callback) {
