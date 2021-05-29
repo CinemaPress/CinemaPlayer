@@ -284,7 +284,7 @@ function cinemaPlayerInit(elem) {
       '' +
       '    .cinemaplayer-selected {' +
       '        background: 0 0;' +
-      '        margin-right: 10px;' +
+      '        padding-right: 20px;' +
       '    }' +
       '' +
       '    .cinemaplayer-selected:after {' +
