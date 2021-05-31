@@ -306,13 +306,17 @@ function cinemaPlayerInit(elem) {
       '    .cinemaplayer-items .cinemaplayer-item-select,' +
       '    .cinemaplayer-selected {' +
       '        color: ' + d['cinemaplayer']['tabs']['color'] + ';' +
-      '        padding: 8px 20px 8px 8px;' +
+      '        padding: 8px;' +
       '        border: 1px solid transparent;' +
       '        cursor: pointer;' +
       '        font-size: 14px;' +
       '        user-select: none;' +
       '        text-align: center;' +
       '        line-height: normal;' +
+      '    }' +
+      '' +
+      '    .cinemaplayer-selected {' +
+      '        padding: 8px 20px 8px 8px;' +
       '    }' +
       '' +
       '    .cinemaplayer-items {' +
