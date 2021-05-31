@@ -284,7 +284,6 @@ function cinemaPlayerInit(elem) {
       '' +
       '    .cinemaplayer-selected {' +
       '        background: 0 0;' +
-      '        padding-right: 20px;' +
       '    }' +
       '' +
       '    .cinemaplayer-selected:after {' +
@@ -307,7 +306,7 @@ function cinemaPlayerInit(elem) {
       '    .cinemaplayer-items .cinemaplayer-item-select,' +
       '    .cinemaplayer-selected {' +
       '        color: ' + d['cinemaplayer']['tabs']['color'] + ';' +
-      '        padding: 8px;' +
+      '        padding: 8px 20px 8px 8px;' +
       '        border: 1px solid transparent;' +
       '        cursor: pointer;' +
       '        font-size: 14px;' +
