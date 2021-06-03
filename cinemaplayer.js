@@ -94,7 +94,7 @@ function cinemaPlayerInit(elem) {
     },
     {
       "name":"data-cinemaplayer-tabs-event",
-      "value":"mouseover"
+      "value": "mouseover"
     },
     {
       "name":"data-cinemaplayer-tabs-top",
@@ -1103,7 +1103,7 @@ function cinemaPlayerSelect() {
       b.appendChild(c);
     }
     x[i].appendChild(b);
-    a.addEventListener(cinemaPlayerData['cinemaplayer']['tabs']['event'], function(e) {
+    function tabsEvent(e) {
       cinemaPlayerTimeout = 0;
       e.stopPropagation();
       cinemaPlayerCloseAllSelect(this);
@@ -1111,6 +1111,13 @@ function cinemaPlayerSelect() {
       this.classList.toggle('select-arrow-active');
       this.style.color = cinemaPlayerData['cinemaplayer']['tabs']['color'];
       this.parentNode.style.width = cinemaPlayerData['cinemaplayer']['tabs']['width'];
+    }
+    ['click',
+      cinemaPlayerData['cinemaplayer']['tabs']['event'] === 'click'
+        ? ''
+        : cinemaPlayerData['cinemaplayer']['tabs']['event']
+    ].filter(Boolean).forEach( function(evt) {
+      a.addEventListener(evt, tabsEvent, false);
     });
     if (i === l - 1 && ll <= 1) {
       cinemaPlayerTimeout = 0;
