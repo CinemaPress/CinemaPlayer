@@ -94,7 +94,7 @@ function cinemaPlayerInit(elem) {
     },
     {
       "name":"data-cinemaplayer-tabs-event",
-      "value": "mouseover"
+      "value":"mouseover"
     },
     {
       "name":"data-cinemaplayer-tabs-top",
@@ -1117,7 +1117,7 @@ function cinemaPlayerSelect() {
         ? ''
         : cinemaPlayerData['cinemaplayer']['tabs']['event']
     ].filter(Boolean).forEach( function(evt) {
-      a.addEventListener(evt, tabsEvent, false);
+      a.addEventListener(evt, tabsEvent);
     });
     if (i === l - 1 && ll <= 1) {
       cinemaPlayerTimeout = 0;
