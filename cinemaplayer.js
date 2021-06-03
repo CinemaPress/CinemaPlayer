@@ -94,7 +94,7 @@ function cinemaPlayerInit(elem) {
     },
     {
       "name":"data-cinemaplayer-tabs-event",
-      "value":"mouseover"
+      "value":"click"
     },
     {
       "name":"data-cinemaplayer-tabs-top",
@@ -1112,12 +1112,12 @@ function cinemaPlayerSelect() {
       this.style.color = cinemaPlayerData['cinemaplayer']['tabs']['color'];
       this.parentNode.style.width = cinemaPlayerData['cinemaplayer']['tabs']['width'];
     }
-    ['click',
-      cinemaPlayerData['cinemaplayer']['tabs']['event'] === 'click'
+    [cinemaPlayerData['cinemaplayer']['tabs']['event'] === 'click'
         ? ''
-        : cinemaPlayerData['cinemaplayer']['tabs']['event']
+        : cinemaPlayerData['cinemaplayer']['tabs']['event'],
+      'click'
     ].filter(Boolean).forEach( function(evt) {
-      a.addEventListener(evt, tabsEvent);
+      a.addEventListener(evt, tabsEvent, false);
     });
     if (i === l - 1 && ll <= 1) {
       cinemaPlayerTimeout = 0;

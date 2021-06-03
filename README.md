@@ -161,7 +161,7 @@ Example: [CinemaPlayer.github.io/example/data-cinemaplayer-tabs-event.html](http
 ```html
 <div 
     id="cinemaplayer"
-    data-cinemaplayer-tabs-event="click"
+    data-cinemaplayer-tabs-event="mouseover"
     data-cinemaplayer-api="https://CinemaPlayer.github.io/example/api-object.json"
 ></div>
 <script src="https://CinemaPlayer.github.io/cinemaplayer.js"></script>
