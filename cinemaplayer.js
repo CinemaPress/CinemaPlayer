@@ -587,9 +587,11 @@ function cinemaPlayerTab(selected) {
   var prev_selector = '';
   var next_selector = '';
   var tabs = cinemaPlayerKeys(cinemaPlayerData.api.tabs);
-  if (selected && selected.tab && selected.selected) {
+  if (selected && selected.tab && selected.active && selected.selected) {
     if (cinemaPlayerSave && cinemaPlayerData['cinemaplayer']['tabs']['unique']) {
-      cinemaPlayerSave.setItem(cinemaPlayerData['cinemaplayer']['tabs']['unique'], JSON.stringify(selected));
+      if (cinemaPlayerData && cinemaPlayerData.api && cinemaPlayerData.api.tab && cinemaPlayerData.api.tab[selected.tab] && cinemaPlayerData.api.tab[selected.tab].selector && cinemaPlayerData.api.tab[selected.tab].selector[selected.active] && cinemaPlayerData.api.tab[selected.tab].selector[selected.active].option && typeof cinemaPlayerData.api.tab[selected.tab].selector[selected.active].option === 'object' && Object.keys(cinemaPlayerData.api.tab[selected.tab].selector[selected.active].option).length >= 2) {
+        cinemaPlayerSave.setItem(cinemaPlayerData['cinemaplayer']['tabs']['unique'], JSON.stringify(selected));
+      }
     }
     var t = false;
     tabs.forEach(function(tab) {
