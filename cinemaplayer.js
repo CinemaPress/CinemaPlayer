@@ -179,6 +179,14 @@ function cinemaPlayerInit(elem) {
     {
       "name":"data-cinemaplayer-select-episode",
       "value":""
+    },
+    {
+      "name":"data-cinemaplayer-sort-season",
+      "value":"asc"
+    },
+    {
+      "name":"data-cinemaplayer-sort-episode",
+      "value":"asc"
     }
   ]);
 
@@ -864,7 +872,29 @@ function cinemaPlayerApiFormat(raw) {
     ) {
       cinemaPlayerObj.api.tabs = [];
       cinemaPlayerObj.api.tab = {};
-      cinemaPlayerRaw['simple-api'].forEach(function(obj) {
+      cinemaPlayerRaw['simple-api'].sort(function (a, b) {
+        if (!a || !b || !a['episode'] || !b['episode']) return 0;
+        var ea = parseInt((a['episode'] + '').replace(/[^0-9]/g, ''));
+        var eb = parseInt((b['episode'] + '').replace(/[^0-9]/g, ''));
+        if (ea < eb) {
+          return cinemaPlayerData['cinemaplayer']['sort']['episode'].toLowerCase() === 'asc' ? -1 : 1;
+        }
+        if (ea > eb) {
+          return cinemaPlayerData['cinemaplayer']['sort']['episode'].toLowerCase() === 'asc' ? 1 : -1;
+        }
+        return 0;
+      }).sort(function (a, b) {
+        if (!a || !b || !a['season'] || !b['season']) return 0;
+        var sa = parseInt((a['season'] + '').replace(/[^0-9]/g, ''));
+        var sb = parseInt((b['season'] + '').replace(/[^0-9]/g, ''));
+        if (sa < sb) {
+          return cinemaPlayerData['cinemaplayer']['sort']['season'].toLowerCase() === 'asc' ? -1 : 1;
+        }
+        if (sa > sb) {
+          return cinemaPlayerData['cinemaplayer']['sort']['season'].toLowerCase() === 'asc' ? 1 : -1;
+        }
+        return 0;
+      }).forEach(function(obj) {
         var tab, selector, option, param = {};
         var season = '', episode = '', name = '';
         if (obj['season'] && (obj['season'] + '').replace(/[^0-9]/g, '')) {
