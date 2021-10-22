@@ -1,6 +1,10 @@
 var cinemaPlayerData = {};
 var cinemaPlayerTimeout = 0;
-var cinemaPlayerSave = (window && window.localStorage) || null;
+try {
+  var cinemaPlayerSave = (window && window.localStorage) || null;
+} catch(e) {
+  console.log(e);
+}
 
 function cinemaPlayerInit(elem) {
   var h, a, w, i, l, t, c, s, d = cinemaPlayerData;
@@ -872,7 +876,20 @@ function cinemaPlayerApiFormat(raw) {
     ) {
       cinemaPlayerObj.api.tabs = [];
       cinemaPlayerObj.api.tab = {};
-      cinemaPlayerRaw['simple-api'].sort(function (a, b) {
+      var tv = false;
+      for (var i = 0, l = cinemaPlayerRaw['simple-api'].length; i < l; i++) {
+        if (cinemaPlayerRaw['simple-api'][i] && cinemaPlayerRaw['simple-api'][i]['season'] && cinemaPlayerRaw['simple-api'][i]['episode']) {
+          tv = true;
+          break;
+        }
+      }
+      cinemaPlayerRaw['simple-api'].filter(function (item) {
+        if (tv) {
+          return !(!item || !item['season'] || !item['episode']);
+        } else {
+          return true;
+        }
+      }).sort(function (a, b) {
         if (!a || !b || !a['episode'] || !b['episode']) return 0;
         var ea = parseInt((a['episode'] + '').replace(/[^0-9]/g, ''));
         var eb = parseInt((b['episode'] + '').replace(/[^0-9]/g, ''));
