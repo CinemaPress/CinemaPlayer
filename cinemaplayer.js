@@ -602,7 +602,9 @@ function cinemaPlayerTab(selected) {
   if (selected && selected.tab && selected.active && selected.selected) {
     if (cinemaPlayerSave && cinemaPlayerData['cinemaplayer']['tabs']['unique']) {
       if (cinemaPlayerData && cinemaPlayerData.api && cinemaPlayerData.api.tab && cinemaPlayerData.api.tab[selected.tab] && cinemaPlayerData.api.tab[selected.tab].selector && cinemaPlayerData.api.tab[selected.tab].selector[selected.active] && cinemaPlayerData.api.tab[selected.tab].selector[selected.active].option && typeof cinemaPlayerData.api.tab[selected.tab].selector[selected.active].option === 'object' && Object.keys(cinemaPlayerData.api.tab[selected.tab].selector[selected.active].option).length >= 2) {
-        cinemaPlayerSave.setItem(cinemaPlayerData['cinemaplayer']['tabs']['unique'], JSON.stringify(selected));
+        if (!(selected.tab === 'names' && /s[0-9]+e[0-9]+/i.test(selected.active))) {
+          cinemaPlayerSave.setItem(cinemaPlayerData['cinemaplayer']['tabs']['unique'], JSON.stringify(selected));
+        }
       }
     }
     var t = false;
@@ -1613,7 +1615,11 @@ function cinemaPlayerHashCode(str) {
         cinemaPlayerId[i].addEventListener('click', function() {
           cinemaPlayerData = {};
           cinemaPlayerTimeout = 0;
-          cinemaPlayerSave = (window && window.localStorage) || null;
+          try {
+            cinemaPlayerSave = (window && window.localStorage) || null;
+          } catch(e) {
+            console.log(e);
+          }
           for (var i in cinemaPlayerId) {
             if (cinemaPlayerId.hasOwnProperty(i) && cinemaPlayerId[i]) {
               document.getElementById(cinemaPlayerId[i].getAttribute('data-cinemaplayer-id')).innerHTML = '';
@@ -1626,7 +1632,11 @@ function cinemaPlayerHashCode(str) {
     if (cinemaPlayerIdActive) {
       cinemaPlayerData = {};
       cinemaPlayerTimeout = 0;
-      cinemaPlayerSave = (window && window.localStorage) || null;
+      try {
+        cinemaPlayerSave = (window && window.localStorage) || null;
+      } catch(e) {
+        console.log(e);
+      }
       cinemaPlayerInit(cinemaPlayerIdActive);
     }
   } else {
